@@ -1,17 +1,16 @@
 import './Habits.css';
+import Habitbox from './Habitbox/Habitbox'
 
 function Habits() {
   return (
-    // <body>
-    // <section className="Section1">
-    //   <header className="Banner">
-    //   <h1 className="Section2-header">Wellness Hub</h1>
-    //   </header>
-    // </section>
-    // <section>
+  <>
+   <div>
       <h1>Habits</h1>
-    // </section>
-    // </body>
+   </div>
+   <div>
+      <Habitbox />
+   </div>
+  </>
   );
 }
 
