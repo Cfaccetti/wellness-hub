@@ -1,5 +1,5 @@
 import './Habits.css';
-import Habitbox from './Habitbox/Habitbox'
+import Habitbox from './Habitbox/Habitbox';
 
 function Habits() {
   return (
