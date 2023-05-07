@@ -5,3 +5,60 @@ label {
 .save {
     margin-left: 10px ;
 }
+
+.habit-list {
+    border-color: #bce38c;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #ebf7dc;
+    padding: 2%;
+    min-height: 200px;
+    /* max-width:15em; */
+    min-width: 15em;
+}
+
+.form-habit-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.habitCreator {
+    margin-top: 1em;
+}
+
+.instructionBox{
+    border-color: #ddcbdf;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #f5eff5;
+    padding: 2%;
+    min-height: 200px;
+    max-width:15em;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    text-align: left;
+    list-style:inside;
+    padding:0
+}
+
+li {
+    margin-left: 0;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+}
+
+button {
+    margin-left: 10px;
+}

@@ -19,7 +19,7 @@ body {
 
 
 .navBar {
-  background-color:#4369d9;
+  background-color:#57b4f9;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -47,9 +47,9 @@ body {
 }
 
 .navBar li.active {
-  background-color: #3554ad;
+  background-color: #3aa6f9;
 }
 
 .navBar li:hover {
-  background-color: #6887e0;
+  background-color: #90cbf8;
 }
