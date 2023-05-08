@@ -131,7 +131,7 @@ export default function Habitbox() {
           <th> { sixdaysagoString } </th>
         </tr>
         {habits.map(item => (
-          <tr key={item.id+'table'}>
+          <tr className={`row-type-${item.type.toLowerCase()}`} key={item.id+'table'}>
             <td>{item.type}</td>
             <td>{item.habit}</td>
             <td>
