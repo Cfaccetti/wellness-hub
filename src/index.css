@@ -54,15 +54,3 @@ body {
 .navBar li:hover {
   background-color: #90cbf8;
 }
-
-.row-type-self-care {
-  background-color: #ddcbdf;
-}
-
-.row-type-self-growth {
-  background-color: #d1aad0
-}
-
-.row-type-household {
-  background-color: #bce38c;
-}
