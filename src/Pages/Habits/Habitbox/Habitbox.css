@@ -116,10 +116,12 @@ th {
 }
 
 .habit-tracker-title {
+    margin-top: 2em;
     margin-left:1em;
 }
 
 .dashboard-title {
+    margin-top: 2em;
     margin-left: 1em;
 }
 
