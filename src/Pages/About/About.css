@@ -1,18 +1,23 @@
-.About {
-    background-color:lightgoldenrodyellow;
-  }
-  
-  
-  /* .Banner {
-    background-color:#4369d9;
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    padding-left: 2%;
-  } */
-  
-  
+ h1 {
+  text-align: center;
+  margin-left: 3em;
+  margin-right: 3em
+}
+
+h2 {
+  margin:0;
+  font-size: x-large;
+  text-align: center;
+}
+
+h3 {
+  font-style: italic;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 2em;
+}

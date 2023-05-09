@@ -8,7 +8,7 @@ export default function Navbar() {
       </Link>
       <ul>
         <CustomLink to="/habits">Habit Tracker</CustomLink>
-        <CustomLink to="/meditation">Meditation</CustomLink>
+        <CustomLink to="/about">About</CustomLink>
       </ul>
     </nav>
   )
