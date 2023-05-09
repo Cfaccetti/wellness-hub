@@ -1,5 +1,6 @@
 import './Habitbox.css';
-import { useState } from 'react'
+import { useState } from 'react';
+import ReactECharts from 'echarts-for-react'
           
 
 export default function Habitbox() {
@@ -74,9 +75,57 @@ export default function Habitbox() {
         return currentHabit;
       });
   
-      console.dir(newHabits)
+      // console.log(newHabits)
       setHabits(newHabits);
     }
+
+    console.log(habits)
+
+    // Bar plot code for Echarts
+
+    //// Convert array of newHabits into desired format
+
+  
+    const data = habits.map(obj => {
+      const totalCount = Object.values(obj).filter(val => typeof val === 'boolean').reduce((acc, curr) => acc + curr, 0);
+      const percentage = Math.min(100, Math.round(totalCount / 7 * 100)); // assuming maximum of 7 counts
+      return [obj.id, obj.habit, totalCount, percentage];
+    });
+    
+    console.log(data);
+    
+
+const options = {
+  tooltip: {},
+  dataset: {
+    // dimensions: ['name', 'value'],
+    source: data
+  },
+  xAxis: { type: 'category',
+  axisLabel: {
+    fontSize:14
+  }, },
+  yAxis: {name: 'Completion rate(%)',
+    nameLocation: 'center',
+    nameGap: 40,
+    axisLabel: {
+      fontSize:14
+    },
+    nameTextStyle:{
+      fontSize: 16
+    },
+    max: 100
+    },
+  series: [{ 
+    data: data,
+    type: 'bar',
+    encode: {
+      x: 1,
+      y: 3
+    },
+  }], 
+  color: ['#57b4f9']
+};
 
     return(
     <>
@@ -161,6 +210,9 @@ export default function Habitbox() {
     </div>
     <div className='dashboard-section'>
           <h2 className='dashboard-title'>Dashboard</h2>
+    </div>
+    <div>
+      <ReactECharts option={options} />
     </div>
     </>
 )     

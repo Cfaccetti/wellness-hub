@@ -9,8 +9,8 @@ body {
 }
 
 .container {
-  /* margin: 1rem; */
-  /* text-align: center; */
+  margin: 1rem; 
+  text-align: center;
 }
 
 .site-title {
@@ -27,7 +27,7 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
-  min-height: 11vh;
+  min-height: 9vh;
 }
 
 .navBar ul {
@@ -36,6 +36,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  font-size: large;
 }
 
 .navBar a {
