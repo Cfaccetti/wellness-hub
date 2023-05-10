@@ -89,16 +89,16 @@ export default function Habitbox() {
     const data = habits.map(obj => {
       const totalCount = Object.values(obj).filter(val => typeof val === 'boolean').reduce((acc, curr) => acc + curr, 0);
       const percentage = Math.min(100, Math.round(totalCount / 7 * 100)); // assuming maximum of 7 counts
-      return [obj.id, obj.habit, totalCount, percentage];
+      return [obj.id, obj.habit, obj.type, totalCount, percentage];
     });
     
     console.log(data);
     
+const colourGroups = {'Household':'#bce38c', 'Self-care':'#ddcbdf', 'Self-growth':'#d1aad0'}
 
 const options = {
   tooltip: {},
   dataset: {
-    // dimensions: ['name', 'value'],
     source: data
   },
   xAxis: { type: 'category',
@@ -119,12 +119,16 @@ const options = {
   series: [{ 
     data: data,
     type: 'bar',
+    itemStyle: {
+      color: function (params) {
+      return colourGroups[params.value[2]]}
+    },
     encode: {
       x: 1,
-      y: 3
+      y: 4
     },
   }], 
-  color: ['#57b4f9']
+  // color: ['#57b4f9']
 };
 
     return(
@@ -132,8 +136,8 @@ const options = {
     <div className="form-habit-list">
             <section className="instructionBox">
                 <h3>Instructions</h3>
-                <p>To add habits to the tracker, write the name of a habit to the text box, select the type of habit and click on save. </p>
-                <p>The updated list of habits will appear on the right hand side of the table.</p>
+                <p className='instructions1'>To add habits to the tracker, write the name of a habit to the text box, select the type of habit and click on save. </p>
+                <p className='instructions2'>The updated list of habits will appear on the right hand side of the table.</p>
         </section>
         <form id="habit-form" className="habitCreator" onSubmit={(e) => {e.preventDefault(); 
             setHabits([...habits, {id: Date.now(), habit, type, count1: false, count2:false, count3:false, count4:false, count5:false, count6:false, count7:false}]) }}>
