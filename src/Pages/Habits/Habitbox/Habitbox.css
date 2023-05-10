@@ -57,7 +57,7 @@ label {
     margin-left: 1em
 }
 
-.instructions1 .instructions2 {
+.instructions1, .instructions2 {
     text-align: justify;
 }
 
