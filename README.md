@@ -1,3 +1,8 @@
+# Description
+This project consists of a Wellness Hub website created using React JS for the course "Introduction to JavaScript", run by Code First Girls. 
+The website was created by team members Nafisat Abdulsalam, Jumoke Olisa and Claudia Castro Faccetti.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
