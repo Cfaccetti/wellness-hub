@@ -128,7 +128,6 @@ const options = {
       y: 4
     },
   }], 
-  // color: ['#57b4f9']
 };
 
     return(
